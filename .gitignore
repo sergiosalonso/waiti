@@ -1,0 +1,15 @@
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+weiti/secrets.py
+
+.env
+db.sqlite3
+venv/
+
+### macOs ###
+.DS_Store
+.AppleDouble
+.LSOverride
