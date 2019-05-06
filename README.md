@@ -10,3 +10,5 @@ Install the requirements:
 `pip install -r requirements.txt`
 Get the server running:
 `python manage.py runserver`
+Install redis in a Docker container and set the published ip:port to 32768:
+`sudo docker run --name my-redis-container -d redis`
