@@ -5,5 +5,6 @@ app_name= 'queue_management'
 
 urlpatterns = [
     path('', views.HomePageView.as_view(), name='queue'),
-    path('update-queue/',views.FreeCheckOutView.as_view() , name='update-queue'),
+    path('update-queue/',views.CheckOutNumberView.as_view() , name='update-queue'),
+    path('free-queue/',views.FreeCheckOutView.as_view() , name='free-queue'),
 ]

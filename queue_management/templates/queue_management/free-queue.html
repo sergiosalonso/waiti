@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  {{form}}
+  <button type="submit">I'm Free</button>
+</form>
+<a class="navbar-brand" href="{%url 'queue_management:update-queue' %}">Change CheckOut</a>
+{% endblock %}
