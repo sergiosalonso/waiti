@@ -6,13 +6,13 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 import redis
-r = redis.Redis(host='localhost', port=32768, charset="utf-8", decode_responses=True, db=0)
+r = redis.Redis(host='localhost', port=32743, charset="utf-8", decode_responses=True, db=0)
 
 class CheckOutNumberView(LoginRequiredMixin, FormView):
     template_name = 'queue_management/update-queue.html'
     form_class = CheckOutNumberForm
     success_url = reverse_lazy('queue_management:free-queue')
-    
+
     def form_valid(self, form):
         #print("This is a form {}".format(type(form.cleaned_data["check_out_number"])))
         user=str(self.request.user)
